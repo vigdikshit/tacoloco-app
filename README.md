@@ -69,7 +69,7 @@ Two classes - ItemService.java, OrderService.java
 			}
 		]
 	}
-	I have assumed that input will come in the form of an object containing items ordered along with their quantities.
+	Note: I have assumed that input will come in the form of an object containing items ordered along with their quantities.
 
 
 
