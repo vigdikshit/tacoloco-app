@@ -1,16 +1,19 @@
 package com.tacoLoco.app.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class OrderQuantity {
 
-	private String item;
+	private String itemName;
 	private Integer quantity;
 	
 	
-	public String getItem() {
-		return item;
+	public String getItemName() {
+		return itemName;
 	}
-	public void setItem(String item) {
-		this.item = item;
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
 	}
 	public Integer getQuantity() {
 		return quantity;

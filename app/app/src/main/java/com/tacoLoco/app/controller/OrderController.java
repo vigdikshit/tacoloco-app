@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tacoLoco.app.model.OrderList;
+import com.tacoLoco.app.model.Order;
 import com.tacoLoco.app.service.OrderService;
 
 @RestController
@@ -17,7 +17,7 @@ public class OrderController {
 	private OrderService orderService;
 	
 	@PostMapping("/orderTotal")
-	public Double calculateOrderTotal(@RequestBody OrderList orderList) {
+	public String calculateOrderTotal(@RequestBody Order orderList) {
 		return orderService.calculateOrderTotal(orderList);
 	}
 }

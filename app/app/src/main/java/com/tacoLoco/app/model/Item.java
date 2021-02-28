@@ -5,31 +5,33 @@ import java.util.Map;
 
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Component
 public class Item {
 
-	private String item;
+	private String name;
 	private Double price;
 	
-	@JsonIgnore
 	private Map<String, Double> items;
 
 	public Item() {
 		items = new HashMap<>();
 	}
 
+	/**
+	 * @param items
+	 */
 	public Item(Map<String, Double> items) {
 		this.items = items;
 	}
 
-	public String getItem() {
-		return item;
+	public String getName() {
+		return name;
 	}
 
-	public void setItem(String item) {
-		this.item = item;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public Double getPrice() {

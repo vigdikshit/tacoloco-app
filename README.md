@@ -40,36 +40,42 @@ Two classes - ItemService.java, OrderService.java
  use Post method with url - localhost:5000/item/addItem
  In body give as below for example:
  {
-	"item":"chicken",
+	"name":"chicken",
 	"price": 3.0
  }
  
  Note: You can only add one item at one time.
  
 3. To get all items present:
-	use Get method with url - localhost:5000/item/getItems
+	Use Get method with url - localhost:5000/item/getItems
 
 4. To remove an item:
-	use delete method with url: localhost:5000/item/removeItem?item={itemName}
+	Use delete method with url: localhost:5000/item/removeItem?item={itemName}
 	Example: localhost:5000/item/removeItem?item=chicken
 
 5. To calculate the order total:
-	use Post method to give input: localhost:5000/order/orderTotal
+	Use Post method to give input: localhost:5000/order/orderTotal . 
 	In body, give as below for example:
 	{
-	"orders" : [
-			{"item": "veggie",
-			 "quantity": 2
+	"order" : [
+			{"itemName": "veggie",
+			 "quantity": 4
 			},
-			{"item": "chicken",
-			 "quantity": 1
-			},
-			{"item": "chorizo",
-			 "quantity": 3
+			{"itemName": "chicken",
+			 "quantity": 0
 			}
 		]
 	}
 	 Note: I have assumed that input will come in the form of an object containing items ordered along with their quantities.
+	
+**Unit testing classes**
+Classes under src/test/java:
+1. OrderControllerTest.java - This class is used to unit test the order controller.
+2. OrderServiceTest.java - This class is used to unit test the order service.
+
+**Steps to test the order controller and order service**
+1. To test order controller, go to the OrderControllerTest class and run as JUnit test.
+2. To test order service, go to the OrderServiceTest class and run as JUnit test.
 
 
 
