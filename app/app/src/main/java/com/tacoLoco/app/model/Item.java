@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Item {
-
 	private String name;
 	private Double price;
 	
