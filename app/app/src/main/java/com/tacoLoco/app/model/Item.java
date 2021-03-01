@@ -11,6 +11,7 @@ public class Item {
 	private Double price;
 	
 	private Map<String, Double> items;
+	
 	public Item() {
 		items = new HashMap<>();
 	}
